@@ -1,0 +1,14 @@
+body{
+    background-image: url("../images/bg.jpg");
+    text-align: center;
+    color: white;
+}
+
+.container{
+    width: 60%;
+    float: right;
+}
+
+.btn-warning{
+    color: white;
+}
