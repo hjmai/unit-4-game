@@ -16,7 +16,7 @@ function createCharacter(name, imgSrc, hp, attackPower, counterAttack){
 }
 
 function StartGame(){
-    obi = createCharacter("Obi", "./assets/images/obi.jpeg", 150, 13, 15);
+    obi = createCharacter("Obi-Wan", "./assets/images/obi.jpeg", 150, 13, 15);
     jarjar = createCharacter("Jar Jar", "./assets/images/jarjar.png", 120, 3, 2);
     darthMaul = createCharacter("Darth Maul", "./assets/images/darthmaul.png", 180, 12, 20);
     darthSidious = createCharacter("Darth Sidious", "./assets/images/darthsidious.jpg", 200, 14, 22);
@@ -27,6 +27,6 @@ $(document).ready(function(){
     StartGame();
     console.log("Game is ready to play!");
     for(var i = 0; i < charArray.length; i++){
-        $('.characters').append('<img src="'+charArray[i].img+'"></img>')
+        $('.characterSection').append('<div class="character"> <h3>'+charArray[i].name+'</h3><img src="'+charArray[i].img+'">');
     }
 });
