@@ -12,11 +12,14 @@ body{
 .btn-warning{
     color: white;
 }
+
 img{
-    width: 50%;
+    width: 128px;
+    height: 128px;
 }
-.characters{
-    margin-left: auto;
-    margin-right: auto;
+.character{
+    border: 1px solid white;
+    padding: 0;
+    margin: 10px;
     display: block;
 }
