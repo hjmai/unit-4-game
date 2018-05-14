@@ -53,11 +53,13 @@ $(document).ready(function(){
         if(!yourCharSelected){
             yourCharSelected = true;
             $('.yourHero').append($(this));
+            $(this).unbind('click');
         }
         else{
             if(!enemyCharSelected){
                 enemyCharSelected = true;
                 $('.enemyHero').append($(this));
+                $(this).unbind('click');
             }
         }
     })
