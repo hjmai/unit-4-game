@@ -19,7 +19,6 @@ function createCharacter(id, name, imgSrc, hp, attackPower, counterAttack){
 }
 
 function StartGame(){
-    $('.characterSelection').empty();
     obi = createCharacter("obi", "Obi-Wan", "./assets/images/obi.jpeg", 150, 13, 15);
     jarjar = createCharacter("jarjar", "Jar Jar", "./assets/images/jarjar.png", 120, 3, 2);
     darthMaul = createCharacter("darthMaul", "Darth Maul", "./assets/images/darthmaul.png", 180, 12, 20);
@@ -29,7 +28,6 @@ function StartGame(){
 
 // Creates our characters and inserts them into html
 function reset(){
-    StartGame();
     for(var i = 0; i < charArray.length; i++){
         $('.characterSection').append(
             // This block defines characters data attributes
