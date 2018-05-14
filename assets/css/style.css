@@ -26,6 +26,9 @@ img{
     border: 1px solid white;
     margin: 0 auto;
 }
+.character:hover{
+    background-color: rgba(0, 255, 0, .3);
+}
 div{
     padding: 3px;
 }
