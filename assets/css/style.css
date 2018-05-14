@@ -3,12 +3,15 @@ body{
     text-align: center;
     color: white;
 }
-
 .container{
-    width: 60%;
-    float: right;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(211, 211 ,211, 0.5)
 }
-
+.characterSection{
+    margin: 0 auto;
+}
 .btn-warning{
     color: white;
 }
@@ -18,8 +21,11 @@ img{
     height: 128px;
 }
 .character{
+    width: 256px;
+    height: 256px;
     border: 1px solid white;
-    padding: 0;
-    margin: 10px;
-    display: block;
+    margin: 0 auto;
+}
+div{
+    padding: 3px;
 }
