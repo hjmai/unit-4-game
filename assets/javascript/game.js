@@ -26,19 +26,30 @@ function StartGame(){
     charArray.push(obi, jarjar, darthMaul, darthSidious); // push darthSidious later
 }
 
-$(document).ready(function(){
+// Creates our characters and inserts them into html
+function reset(){
     StartGame();
-    console.log("Game is ready to play!");
-
-    // This creates each of our character
     for(var i = 0; i < charArray.length; i++){
         $('.characterSection').append(
+            // This block defines characters data attributes
             '<div class="character" id="'+charArray[i].id+
             '"data-attack="'+charArray[i].attackPower+
             '"data-hp="'+charArray[i].hp+
             '"data-counter="'+charArray[i].counterAttack+'">'+
-            '<h3>'+charArray[i].name+'</h3><img src="'+charArray[i].img+'"><h3>HP: '+charArray[i].hp+'</h3>');
+            
+            // This block inserts visible html into the .characterSection
+            '<h3>'+charArray[i].name+'</h3>'+
+            '<img src="'+charArray[i].img+'">'+
+            '<h3>HP: '+charArray[i].hp+'</h3>'+
+            '<h3>Attack: '+charArray[i].attackPower+'</h3>');
     }
+}
+
+$(document).ready(function(){
+    StartGame();
+    console.log("Game is ready to play!");
+    reset();
+
     $('div.character').on('click', function(){
         if(!yourCharSelected){
             yourCharSelected = true;
@@ -49,6 +60,21 @@ $(document).ready(function(){
                 enemyCharSelected = true;
                 $('.enemyHero').append($(this));
             }
+        }
+    })
+
+    $('.fightBtn').on('click', function(){
+        if(!yourCharSelected && !enemyCharSelected){
+            $('.fightSection>div.col-md-12').text('You need to choose your hero and an enemy!');
+        }
+        else if(!yourCharSelected){
+            $('.fightSection>div.col-md-12').text("You need to choose a hero!");
+        }
+        else if(!enemyCharSelected){
+            $('.fightSection>div.col-md-12').text("You need to choose an opponent!");
+        }
+        else{
+            $('.fightSection>div.col-md-12').html("<h2>Let's Battle!</h2>");
         }
     })
 });
