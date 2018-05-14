@@ -99,8 +99,6 @@ $(document).ready(function(){
             yourChar.data('hp', yourHp);
             enemyChar.data('hp', enemyHp);
 
-
-
             // HTML update after stats
             $('.yourHero>.character>#hp').text('HP: '+yourChar.data('hp'));
             $('.yourHero>.character>#attack').text('Attack: '+yourChar.data('attack'));
